@@ -1,0 +1,47 @@
+* INTERFACES *
+
+📦 Modal - V3
+
+🎠 Estrutura do Código
+
+<Modal
+    visible={boolean}               // Controla se aparece ou não
+    animationType="slide"           // Como ele entra na tela
+    transparent={boolean}           // Fundo transparente ou opaco
+    onRequestClose={() => {}}       // O que fazer quando tentar fechar
+>
+
+    {/* Seu conteúdo aqui */}
+
+</Modal>
+
+------------------------------------------------------------------------
+
+📋 Tabela Ninja de Props
+
+        Prop              |       Tipo       |        Descrição
+------------------------------------------------------------------------
+visible                   |     boolean      |     Obrigatória! true = aparece, false = some
+animationType             |     string       |     "none", "slide", "fade" - como entra na tela
+transparent               |     boolean      |     true = fundo transparente, false = fundo opaco
+onRequestClose            |     function     |     Obrigatório no Android! Função chamada no botão voltar
+presentationStyle         |     string       |     iOS Only: "fullScreen", "pageSheet", "formSheet", "overFullScreen"
+supportedOrientations     |     array        |     Orientações permitidas no modal
+
+------------------------------------------------------------------------
+
+💡 Boas Práticas
+
+1️⃣ Sempre implemente o onRequestClose - é obrigatório no Android!
+2️⃣ Use o transparent={true} quando quiser manter o fundo da tela visível.
+3️⃣ Prefira animações suaves como "slide" ou "fade" ao invés de "none". ❌
+
+♿ Dica extra de acessbilidade
+
+- Adicione "accessibilityLabel" e "accessibilyHint" nos botões de fechar para que leitores de tela entendam a função!
+
+-----------------------------------------------------------------------
+
+
+
+
