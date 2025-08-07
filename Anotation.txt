@@ -42,6 +42,34 @@ supportedOrientations     |     array        |     Orientações permitidas no m
 
 -----------------------------------------------------------------------
 
+🚗 ScrollView 
 
+<ScrollView 
+    horizontal={boolean}
+    showsVerticalScrollIndicator={boolean}
+    showsHorizontalScrollIndicator={boolean}
+    contentContainerStyle={style}
+    bounces={boolean}
+    scrollEnabled={boolean}
+>
+
+    /*  Seu conteúdo aqui */
+
+</ScrollView>
+
+------------------------------------------------------------------------
+
+📋 Tabela Ninja de Props
+
+        Prop                       |       Tipo         |        Descrição
+------------------------------------------------------------------------
+horizontal                         |     boolean        |     Define se o scroll é horizontal (padrão: false)
+showsHorizontalScrollIndicator     |     boolean        |     Mostra/esconde a barrinha de scroll horizontal
+showsVerticalScrollIndicator       |     boolean        |     Mostra/esconde a barrinha de scroll vertical
+contentContainerStyle              |     StyleSheet     |     Estilo aplicado ao container do conteúdo
+bounces                            |     boolean        |     Permite o efeito "borrachinha" no iOS
+scrollEnabled                      |     boolean        |     Habilita/desabilita o scroll
+
+------------------------------------------------------------------------
 
 
