@@ -72,4 +72,71 @@ scrollEnabled                      |     boolean        |     Habilita/desabilit
 
 ------------------------------------------------------------------------
 
+🚩 SafeAreaView
 
+📋 Tabela Ninja de Props
+
+     Prop    |             Tipo                |        Descrição
+------------------------------------------------------------------------
+style        |     StyleProp <ViewStyle />     |     Estilos CSS-in-JS para customizar aparência
+children     |     boolean                     |     Conteúdo que será protegido pelas safe areas
+
+------------------------------------------------------------------------
+
+⌨ KeyboardAvoidingView
+
+<KeyboardAvoidingView
+    behavior="padding" // ou "height" ou "position"
+    keyboardVerticalOffset={64}
+    enabled={true}
+    style={{ flex: 1 }}
+>
+
+    {/* Seu conteúdo aqui */}
+
+</KeyboardAvoidingView>
+
+------------------------------------------------------------------------
+
+📋 Tabela Ninja de Props
+
+           Prop            |       Tipo      |        Descrição
+------------------------------------------------------------------------
+behavior                   |     string      |     Como ajustar o layout: "padding", "height" ou "position"
+keyboardVerticalOffset     |     number      |     Espaço extra em pixels (útil para headers)
+enabled                    |     boolean     |     Se o comportamento está ativo (padrão: true)
+contentContainerStyle      |     object      |     Estilo para o container interno
+style                      |     object      |     Estilo para o container principal
+
+------------------------------------------------------------------------
+
+🎮 RefreshControl
+
+import { RefreshControl } from 'react-native'
+
+<ScrollView 
+    refreshControl={
+        <RefreshControl 
+            refreshing={isRefreshing}
+            onRefresh={handleRefresh}
+        />
+    }
+>
+
+    {/* Seu conteúdo aqui */}
+
+</ScrollView>
+
+------------------------------------------------------------------------
+
+📋 Tabela Ninja de Props
+
+           Prop            |       Tipo      |        Descrição
+------------------------------------------------------------------------
+behavior                   |     string      |     Como ajustar o layout: "padding", "height" ou "position"
+keyboardVerticalOffset     |     number      |     Espaço extra em pixels (útil para headers)
+enabled                    |     boolean     |     Se o comportamento está ativo (padrão: true)
+contentContainerStyle      |     object      |     Estilo para o container interno
+style                      |     object      |     Estilo para o container principal
+
+------------------------------------------------------------------------
