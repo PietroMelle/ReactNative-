@@ -1,8 +1,8 @@
 * INTERFACES *
 
-📦 Modal - V3
+📦 Modal
 
-🎠 Estrutura do Código
+🎠 Estrutura do Código:
 
 <Modal
     visible={boolean}               // Controla se aparece ou não
@@ -40,9 +40,13 @@ supportedOrientations     |     array        |     Orientações permitidas no m
 
 - Adicione "accessibilityLabel" e "accessibilyHint" nos botões de fechar para que leitores de tela entendam a função!
 
------------------------------------------------------------------------
+🚧
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰
+🚧
 
-🚗 ScrollView 
+📦 ScrollView 
+
+🎠 Estrutura do Código:
 
 <ScrollView 
     horizontal={boolean}
@@ -70,9 +74,11 @@ contentContainerStyle              |     StyleSheet     |     Estilo aplicado ao
 bounces                            |     boolean        |     Permite o efeito "borrachinha" no iOS
 scrollEnabled                      |     boolean        |     Habilita/desabilita o scroll
 
-------------------------------------------------------------------------
+🚧
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰
+🚧
 
-🚩 SafeAreaView
+📦 SafeAreaView
 
 📋 Tabela Ninja de Props
 
@@ -83,7 +89,9 @@ children     |     boolean                     |     Conteúdo que será protegi
 
 ------------------------------------------------------------------------
 
-⌨ KeyboardAvoidingView
+📦 KeyboardAvoidingView
+
+🎠 Estrutura do Código:
 
 <KeyboardAvoidingView
     behavior="padding" // ou "height" ou "position"
@@ -108,9 +116,13 @@ enabled                    |     boolean     |     Se o comportamento está ativ
 contentContainerStyle      |     object      |     Estilo para o container interno
 style                      |     object      |     Estilo para o container principal
 
-------------------------------------------------------------------------
+🚧
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰
+🚧
 
-🎮 RefreshControl
+📦 RefreshControl
+
+🎠 Estrutura do Código:
 
 import { RefreshControl } from 'react-native'
 
@@ -138,5 +150,58 @@ keyboardVerticalOffset     |     number      |     Espaço extra em pixels (úti
 enabled                    |     boolean     |     Se o comportamento está ativo (padrão: true)
 contentContainerStyle      |     object      |     Estilo para o container interno
 style                      |     object      |     Estilo para o container principal
+
+
+🔍 Explicação passo a passo
+
+            Trecho               |               O que faz     
+------------------------------------------------------------------------
+useState(false)                  |     Controla se está carregado ou não     
+buscarNovasNoticias (função)     |     Função que simula busca de dados      
+setRefreshing(true)              |     Inicia animação de carregamento    
+setTimeout/Promise               |     Simula delay de rede real     
+setRefreshing(false)             |     Para a animação      
+
+🚧
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰
+🚧
+
+📦 Dimensions
+
+É como uma fita métrica mágica que te conta exatamente o tamanho da tela do seu dispositivo. Ele te da a altura, largura e até densidade de pixels.
+
+------------------------------------------------------------------------
+
+🐱‍👤 Principais usos
+
+import { Dimensions } from "react-native"
+
+// Obter dimensões da janela (área visível do app)
+const windowDimensions = Dimensions.get('window')
+
+// Obter dimensões da tela completa (incluindo barra de status)
+const screenDimensions = Dimensions.get('screen')
+
+------------------------------------------------------------------------
+
+📋 Tabela Ninja de Métodos
+
+         Método            |       Tipo        |        Descrição
+------------------------------------------------------------------------
+get('window')              |     Object        |     Retorna (width, height, scale, fontScale) da área visível
+get('screen')              |     Object        |     Retorna (width, height, scale, fontScale) da tela completa
+addEventListener()         |     Function      |     Escuta mudanças nas dimensões
+removeEventListener()      |     Function      |     Remove listener de mudanças
+
+------------------------------------------------------------------------
+
+📋 Propriedades Retornadas
+
+ Propriedade  |      Tipo       |        Descrição
+------------------------------------------------------------------------
+width         |     Number      |     Largura em pixel lógicos
+height        |     Number      |     Altura em pixel lógicos
+scale         |     Number      |     Fator de escala do dispositivo
+fontScale     |     Number      |     Escala de fonte definida pelo usuário
 
 ------------------------------------------------------------------------

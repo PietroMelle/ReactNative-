@@ -7,7 +7,7 @@ Como começar:
 - Feche o Modal ao enviar o formulário
 */
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   View,
   Text,
@@ -53,7 +53,7 @@ export default function FeedbackModal() {
 
       <Modal
         visible={modalVisivel}
-        animationType="slide"
+        animationType="fade"
         transparent={true}
         onRequestClose={() => setModalVisivel(false)}
       >
@@ -105,19 +105,19 @@ export default function FeedbackModal() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#eef2f5',
+    backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
   },
   botaoAvaliar: {
-    backgroundColor: '#2b8a3e',
-    padding: 15,
+    backgroundColor: 'red',
+    padding: 20,
     borderRadius: 8,
   },
   textoBotao: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 20,
   },
   overlay: {
     flex: 1,
@@ -130,7 +130,6 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 12,
     width: '90%',
-    elevation: 5,
     marginBottom: 10
   },
   titulo: {
@@ -164,7 +163,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   botaoEnviar: {
-    backgroundColor: '#2b8a3e',
+    backgroundColor: 'red',
     padding: 12,
     borderRadius: 8,
     flex: 1,
