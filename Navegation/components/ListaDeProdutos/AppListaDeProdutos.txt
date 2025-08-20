@@ -1,0 +1,27 @@
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import TelaListaProdutos from './screens/TelaListaProdutos';
+import TelaDetalhesProduto from './screens/TelaDetalhesProduto';
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="TelaListaProdutos">
+        <Stack.Screen
+          name="TelaListaProdutos"
+          component={TelaListaProdutos}
+          options={{ title: '📦 Lista de Produtos' }}
+        />
+        <Stack.Screen
+          name="TelaDetalhesProduto"
+          component={TelaDetalhesProduto}
+          options={{ title: '📦 Detalhes do Produto' }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}

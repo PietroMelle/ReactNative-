@@ -1,0 +1,28 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import TelaFormulario from './components/ExemploFormulario/TelaFormulario';
+import TelaResumo from './components/ExemploFormulario/TelaResumo';
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+
+      <Stack.Navigator initialRouteName="TelaFormulario">
+        <Stack.Screen
+          name="TelaFormulario"
+          component={TelaFormulario}
+          options={{ title: 'Cadastro 📝' }}
+        />
+        <Stack.Screen
+          name="TelaResumo"
+          component={TelaResumo}
+          options={{ title: 'Resumo ✅' }}
+        />
+      </Stack.Navigator>
+      
+    </NavigationContainer>
+  );
+}
